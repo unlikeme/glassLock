@@ -1,4 +1,4 @@
-package com.nemus.apps.gesture.ui;
+package com.nemus.apps.glasslock.ui;
 
 import android.content.Context;
 import android.gesture.Gesture;
@@ -19,8 +19,8 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.AnimationSet;
 import android.widget.FrameLayout;
 
-import com.nemus.apps.gesture.DownLoader;
-import com.nemus.apps.gesture.Utils;
+import com.nemus.apps.glasslock.DownLoader;
+import com.nemus.apps.glasslock.Utils;
 
 import java.util.ArrayList;
 

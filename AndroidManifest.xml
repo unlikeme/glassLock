@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.nemus.apps.gesture"
+    package="com.nemus.apps.glasslock"
     android:versionCode="1"
     android:versionName="1.0" 
     >
@@ -22,7 +22,7 @@
 
         
         <activity
-            android:name="com.nemus.apps.gesture.ui.SettingsActivity"
+            android:name="com.nemus.apps.glasslock.ui.SettingsActivity"
             android:label="@string/app_name" 
 	        android:theme="@style/AppTheme"
             >
@@ -33,7 +33,7 @@
         </activity>
         
         <activity
-            android:name="com.nemus.apps.gesture.ui.GestureBuilderActivity"
+            android:name="com.nemus.apps.glasslock.ui.GestureBuilderActivity"
             android:label="@string/title_gesture_list"
             android:icon="@drawable/ic_launcher"
             android:theme="@style/AppTheme"
@@ -41,27 +41,27 @@
         </activity>
 
         <activity
-            android:name="com.nemus.apps.gesture.ui.CreateGestureActivity"
+            android:name="com.nemus.apps.glasslock.ui.CreateGestureActivity"
             android:label="@string/title_gesture_create"
             android:theme="@style/AppTheme"
             />
         
         <service
-            android:name="com.nemus.apps.gesture.LockService"
+            android:name="com.nemus.apps.glasslock.LockService"
             >
         </service>
 
         
         <receiver
-            android:name="com.nemus.apps.gesture.CmdReceiver" 
+            android:name="com.nemus.apps.glasslock.CmdReceiver" 
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED"
             >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
  			<intent-filter>
-                <action android:name="com.nemus.apps.gesture.ACTION_START_SERVICE" />
-                <action android:name="com.nemus.apps.gesture.ACTION_STOP_SERVICE" />
+                <action android:name="com.nemus.apps.glasslock.ACTION_START_SERVICE" />
+                <action android:name="com.nemus.apps.glasslock.ACTION_STOP_SERVICE" />
                 <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>            
         </receiver>

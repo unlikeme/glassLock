@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.nemus.apps.gesture.ui;
+package com.nemus.apps.glasslock.ui;
 
 import android.app.Dialog;
 import android.app.AlertDialog;
@@ -43,7 +43,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.BitmapDrawable;
 
-import com.nemus.apps.gesture.R;
+import com.nemus.apps.glasslock.R;
 
 import java.util.Map;
 import java.util.Collections;

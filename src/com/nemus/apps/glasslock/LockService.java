@@ -1,4 +1,4 @@
-package com.nemus.apps.gesture;
+package com.nemus.apps.glasslock;
 
 import android.app.Activity;
 import android.app.KeyguardManager;
@@ -12,7 +12,7 @@ import android.os.IBinder;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import com.nemus.apps.gesture.ui.LayerView;
+import com.nemus.apps.glasslock.ui.LayerView;
 
 /**
  * 

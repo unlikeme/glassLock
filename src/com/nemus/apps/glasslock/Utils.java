@@ -1,4 +1,4 @@
-package com.nemus.apps.gesture;
+package com.nemus.apps.glasslock;
 
 import android.content.Context;
 import android.content.SharedPreferences;

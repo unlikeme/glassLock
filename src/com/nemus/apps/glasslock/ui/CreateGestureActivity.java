@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.nemus.apps.gesture.ui;
+package com.nemus.apps.glasslock.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -27,7 +27,7 @@ import android.gesture.GestureLibrary;
 import android.graphics.Path;
 import android.widget.TextView;
 
-import com.nemus.apps.gesture.R;
+import com.nemus.apps.glasslock.R;
 
 
 public class CreateGestureActivity extends Activity {

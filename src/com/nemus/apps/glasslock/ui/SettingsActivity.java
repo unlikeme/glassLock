@@ -1,4 +1,4 @@
-package com.nemus.apps.gesture.ui;
+package com.nemus.apps.glasslock.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,8 @@ import android.preference.PreferenceScreen;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceActivity;
 
-import com.nemus.apps.gesture.Const;
-import com.nemus.apps.gesture.R;
+import com.nemus.apps.glasslock.Const;
+import com.nemus.apps.glasslock.R;
 
 /**
  * 

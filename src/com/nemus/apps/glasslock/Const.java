@@ -1,4 +1,4 @@
-package com.nemus.apps.gesture;
+package com.nemus.apps.glasslock;
 
 
 /**
@@ -10,7 +10,7 @@ package com.nemus.apps.gesture;
  */
 public interface Const {
     
-    public static final String PKGNAME = "com.nemus.apps.gesture";
+    public static final String PKGNAME = "com.nemus.apps.glasslock";
     
     public static final String ACTION_START_SERVICE     = PKGNAME + ".ACTION_START_SERVICE"; 
     public static final String ACTION_STOP_SERVICE      = PKGNAME + ".ACTION_STOP_SERVICE";
