@@ -2,13 +2,13 @@
 
 <resources>
 
-    <string name="app_name">유성락</string>
+    <string name="app_name">투명락</string>
     <string name="title_settings">설정</string>
 	<string name="title_gesture_list">제스쳐 리스트</string>
 	<string name="title_gesture_create">제스쳐 만들기</string>
 	
     <string name="button_add">추가</string>
-    <string name="button_reload">reload</string>
+    <string name="button_reload">재로드</string>
     <string name="button_discard">취소</string>
     <string name="button_done">완료</string>
     
@@ -30,14 +30,27 @@
     
     <!--  settings   -->
     <string name="settings_title">설정</string>
-    <string name="settings_onoff_title">유성락 On/Off</string>
+    <string name="settings_onoff_title">투명락 on/off</string>
     <string name="settings_onoff_summary">유성락을 실행하려면 체크하세요.</string>
-    
+
+    <!--  settings.select  -->
+    <string name="settings_selectunlock">잠금해제 선택</string>
     <string name="settings_gesture">제스쳐</string>
-    <string name="settings_gesture_manage_title">관리</string>
-    <string name="settings_gesture_manage_summary">제스처 추가나 삭제를 할 수 있습니다.</string>
-    <string name="settings_gesture_visibility_title">보이기</string>
-    <string name="settings_gesture_visibility_summary">제스쳐 라인이 보입니다.</string>
+    <string name="settings_knock">노크</string>
     
+	    <!--  settings.select.gesture -->
+        <string name="settings_gesture_manage_title">관리</string>
+        <string name="settings_gesture_manage_summary">제스처 추가나 삭제를 할 수 있습니다.</string>
+        <string name="settings_gesture_visibility_title">보이기</string>
+        <string name="settings_gesture_visibility_summary">제스쳐 라인이 보입니다.</string>
     
+        <!--  settings.select.knock -->
+        
+    <!--  settings additional -->
+	<string name="settings_addtional">추가설정</string>    
+	<string name="settings_auto_unlock">자동잠금해제</string>    
+	<string name="settings_auto_unlock_summary">전화가 오면 자동으로 잠금을 헤제합니다.</string>    
+		
+	
+	
 </resources>

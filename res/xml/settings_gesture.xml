@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings_title" 
+    >
+	
+	<PreferenceCategory android:title="@string/settings_gesture">
+	    <Preference android:key="gesture_manage" 
+	        android:title="@string/settings_gesture_manage_title"
+	        android:summary="@string/settings_gesture_manage_summary"
+	        />
+	    <CheckBoxPreference android:key="gesture_visibility"
+	        android:title="@string/settings_gesture_visibility_title"
+	        android:summary="@string/settings_gesture_visibility_summary"
+	        />
+	</PreferenceCategory>
+	
+	
+</PreferenceScreen>

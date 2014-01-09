@@ -11,6 +11,8 @@ import android.preference.PreferenceActivity;
 
 import com.nemus.apps.glasslock.Const;
 import com.nemus.apps.glasslock.R;
+import com.nemus.apps.glasslock.lock.gesture.GestureBuilderActivity;
+import com.nemus.apps.glasslock.lock.gesture.GestureSettingsActivity;
 
 /**
  * 
@@ -22,8 +24,9 @@ import com.nemus.apps.glasslock.R;
 public class SettingsActivity extends PreferenceActivity implements OnPreferenceChangeListener, OnPreferenceClickListener {
 
     private CheckBoxPreference mOnOff;
-    private Preference mGestureManage;
-    private CheckBoxPreference mGestureVisibility;
+    private Preference mGesture;
+    private Preference mKnock;
+    private CheckBoxPreference mAutoUnlock;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +36,13 @@ public class SettingsActivity extends PreferenceActivity implements OnPreference
         mOnOff = (CheckBoxPreference)getPreferenceScreen().findPreference(Const.PREFS_SERVICE_ONOFF);
         mOnOff.setOnPreferenceChangeListener(this);
 
-        mGestureManage = getPreferenceManager().findPreference("gesture_manage");
-        mGestureManage.setOnPreferenceClickListener(this);
+        mGesture = getPreferenceManager().findPreference("settings_gesture");
+        mGesture.setOnPreferenceClickListener(this);
         
-        mGestureVisibility = (CheckBoxPreference) getPreferenceManager().findPreference("gesture_visibility");
+        mKnock = getPreferenceManager().findPreference("settings_knock");
+        mKnock.setOnPreferenceClickListener(this);
+
+        mAutoUnlock = (CheckBoxPreference) getPreferenceManager().findPreference(Const.PREFS_AUTO_UNLOCK);
         
 /*        
         getSharedPreferences(Const.SHARED_PREFS_KEY, Context.MODE_PRIVATE).registerOnSharedPreferenceChangeListener(this);
@@ -74,8 +80,8 @@ public class SettingsActivity extends PreferenceActivity implements OnPreference
 
     @Override
     public boolean onPreferenceClick(Preference preference) {
-        if(preference.equals(mGestureManage)){
-            startActivity(new Intent(SettingsActivity.this, GestureBuilderActivity.class));
+        if(preference.equals(mGesture)){
+            startActivity(new Intent(this, GestureSettingsActivity.class));
             return true;
         }
         return false;

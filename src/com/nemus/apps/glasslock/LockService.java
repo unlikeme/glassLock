@@ -9,10 +9,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
+import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import com.nemus.apps.glasslock.ui.LayerView;
 
 /**
  * 
@@ -28,8 +28,10 @@ public class LockService extends Service {
     private KeyguardLock mLock;
     private IntentFilter mFilter; 
     private Receiver mReceiver;
-    private LayerView mLv;
+    private LockFrame mLockFrame;
     private TelephonyManager mTelMgr;
+    private Listener mPhoneStateListener;
+    
     
     @Override
     public IBinder onBind(Intent intent) {
@@ -49,7 +51,9 @@ public class LockService extends Service {
         mLock.disableKeyguard();
 
         mTelMgr = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-
+        mPhoneStateListener = new Listener();
+        mTelMgr.listen(mPhoneStateListener, PhoneStateListener.LISTEN_CALL_STATE);
+        
         mReceiver = new Receiver();
 
         mFilter = new IntentFilter();
@@ -57,8 +61,9 @@ public class LockService extends Service {
         
         registerReceiver(mReceiver, mFilter);
         
-        mLv = new LayerView(this, "topLayer");
+        mLockFrame = new LockFrame(this, "topLayer");
         
+        Utils.setLockView(getBaseContext());
     }
     
     
@@ -80,10 +85,10 @@ public class LockService extends Service {
             String act = intent.getAction();
             
             if(Intent.ACTION_SCREEN_OFF.equals(act)){
-                if(Utils.isServiceOn(context)){
+                if(Utils.getBoolean(context,Const.PREFS_SERVICE_ONOFF)){
                     int state = mTelMgr.getCallState();
                     if(state == TelephonyManager.CALL_STATE_IDLE){
-                        startLock(context);
+                        startLock();
                     }
                 }
                 
@@ -91,11 +96,32 @@ public class LockService extends Service {
         }
     }
     
-    private void startLock(Context ctx){
-        if( mLv == null ){
-            mLv = new LayerView(this, "topLayer");
+    private class Listener extends PhoneStateListener {
+        public void onCallStateChanged(int state, String num){
+            switch(state){
+                case TelephonyManager.CALL_STATE_IDLE:
+                    break;
+                case TelephonyManager.CALL_STATE_OFFHOOK:
+                    break;
+                case TelephonyManager.CALL_STATE_RINGING:
+                    if(Utils.getBoolean(getBaseContext(), Const.PREFS_AUTO_UNLOCK)){
+                        stopLock();
+                    }
+                    break;
+            }
         }
-        mLv.addLayer();
+        
+    }
+    
+    private void startLock(){
+        if( mLockFrame == null ){
+            mLockFrame = new LockFrame(this, "topLayer");
+        }
+        mLockFrame.addLayer();
+    }
+    
+    private void stopLock(){
+        mLockFrame.removeLayer();
     }
     
 }

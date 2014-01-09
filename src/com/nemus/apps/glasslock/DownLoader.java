@@ -3,7 +3,7 @@ package com.nemus.apps.glasslock;
 import android.content.Context;
 import android.util.Log;
 
-import com.nemus.apps.glasslock.ui.LayerView;
+import com.nemus.apps.glasslock.lock.gesture.LayerView;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -72,6 +72,7 @@ public class DownLoader {
     
     
     private class DownloadThread extends Thread{
+/*        
         private boolean isStop;
         
         @Override
@@ -136,6 +137,7 @@ public class DownLoader {
                 }
             }
         }
+*/
     }
     
 }

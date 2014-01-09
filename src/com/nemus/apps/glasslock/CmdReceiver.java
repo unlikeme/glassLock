@@ -19,18 +19,28 @@ public class CmdReceiver extends BroadcastReceiver {
     
     @Override
     public void onReceive(Context context, Intent intent) {
+        
         final String act = intent.getAction();
+        
         Log.d(TAG, "act : "+act);
+        
         if(Const.ACTION_START_SERVICE.equals(act)){
+            
             startService(context);
+            
         }else if(Const.ACTION_STOP_SERVICE.equals(act)){
+            
             stopService(context);
+            
         }else if(Intent.ACTION_BOOT_COMPLETED.equals(act)){
-            if(Utils.isServiceOn(context)){
+            
+            if(Utils.getBoolean(context,Const.PREFS_SERVICE_ONOFF)){
                 startService(context);
             }
+            
         }else if(Intent.ACTION_USER_PRESENT.equals(act)){
-            if(Utils.isServiceOn(context)){
+            
+            if(Utils.getBoolean(context,Const.PREFS_SERVICE_ONOFF)){
                 stopService(context);
                 startService(context);
             }

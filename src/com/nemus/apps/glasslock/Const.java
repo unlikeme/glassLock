@@ -17,9 +17,12 @@ public interface Const {
     
     
     // Shared Preference Key
-    public static final String SHARED_PREFS_KEY         = PKGNAME + ".prefs";
+    //public static final String SHARED_PREFS_KEY         = PKGNAME + ".prefs";
  
-    public static final String PREFS_SERVICE_ONOFF      = "prefs_service_onoff"; 
+    public static final String PREFS_SERVICE_ONOFF      = "prefs_service_onoff";
+    public static final String PREFS_GESTURE_VISIBILTY  = "gesture_visibility";
+    public static final String PREFS_AUTO_UNLOCK        = "auto_unlock";
+    
 }
 
 

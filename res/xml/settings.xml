@@ -11,16 +11,26 @@
 	    />
 	
 	
-	<PreferenceCategory android:title="@string/settings_gesture">
-	    <Preference android:key="gesture_manage" 
-	        android:title="@string/settings_gesture_manage_title"
-	        android:summary="@string/settings_gesture_manage_summary"
+	<PreferenceCategory android:title="@string/settings_selectunlock">
+	    <Preference android:key="settings_gesture" 
+	        android:title="@string/settings_gesture"
 	        />
-	    <CheckBoxPreference android:key="gesture_visibility"
-	        android:title="@string/settings_gesture_visibility_title"
-	        android:summary="@string/settings_gesture_visibility_summary"
+	    <Preference android:key="settings_knock" 
+	        android:title="@string/settings_knock"
 	        />
 	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="@string/settings_addtional">
+	    <CheckBoxPreference android:key="auto_unlock"
+	        android:title="@string/settings_auto_unlock"
+	        android:summary="@string/settings_auto_unlock_summary"
+	        />
+	</PreferenceCategory>
+	
+</PreferenceScreen>
+		
+	
+	
 <!--     
     	<preferencecategory android:title="카테고리1">
 	    <preference android:title="첫번째" android:key="first">
@@ -35,4 +45,3 @@
     
  -->	
 	
-</PreferenceScreen>
