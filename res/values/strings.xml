@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">YouseongLock</string>
+    <string name="title_settings">Settings</string>
+	<string name="title_gesture_list">Gesture List</string>
+	<string name="title_gesture_create">Gesture Create</string>
+	
+    <string name="button_add">Add gesture</string>
+    <string name="button_reload">Reload</string>
+    <string name="button_discard">Discard</string>
+    <string name="button_done">Done</string>
+    
+    <string name="prompt_gesture_name">Name</string>
+    <string name="error_missing_name">You must enter a name</string>
+    <string name="save_success">Gesture saved in %s</string>
+    <string name="rename_action">OK</string>
+    <string name="cancel_action">Cancel</string>
+    <string name="gestures_loading">Loading gestures...</string>
+    <string name="gestures_empty">No gestures</string>
+    <string name="gestures_activity">Gestures</string>
+    <string name="gestures_rename">Rename</string>
+    <string name="gestures_delete">Delete</string>
+    <string name="gestures_delete_success">Gesture deleted</string>
+    <string name="gestures_rename_title">Rename gesture</string>
+    <string name="gestures_rename_label">Gesture name</string>
+    <string name="gestures_error_loading">Could not load %s. Make sure you have storage available.</string>
+    
+    
+    <!--  settings   -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_onoff_title">YouseongLock on/off</string>
+    <string name="settings_onoff_summary">Check if you want to run YouseongLock.</string>
+    
+    <string name="settings_gesture">Gesture</string>
+    <string name="settings_gesture_manage_title">Management</string>
+    <string name="settings_gesture_manage_summary">Add or delete gesture.</string>
+    <string name="settings_gesture_visibility_title">Visibility</string>
+    <string name="settings_gesture_visibility_summary">You can show and hide the line.</string>
+    
+</resources>

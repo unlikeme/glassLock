@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings_title" 
+    >
+    
+	<CheckBoxPreference android:key="prefs_service_onoff"
+	    android:title="@string/settings_onoff_title"
+	    android:summary="@string/settings_onoff_summary"
+	    android:defaultValue="false"
+	    />
+	
+	
+	<PreferenceCategory android:title="@string/settings_gesture">
+	    <Preference android:key="gesture_manage" 
+	        android:title="@string/settings_gesture_manage_title"
+	        android:summary="@string/settings_gesture_manage_summary"
+	        />
+	    <CheckBoxPreference android:key="gesture_visibility"
+	        android:title="@string/settings_gesture_visibility_title"
+	        android:summary="@string/settings_gesture_visibility_summary"
+	        />
+	</PreferenceCategory>
+<!--     
+    	<preferencecategory android:title="카테고리1">
+	    <preference android:title="첫번째" android:key="first">
+	    </preference>
+	</preferencecategory>
+	<preferencecategory android:title="카테고리2">
+	    <preference android:title="@string/app_name" android:key="app_name">
+    	<preference android:title="@string/hello_world" android:key="hello_world">
+    	</preference>
+    	</preference>
+    </preferencecategory>
+    
+ -->	
+	
+</PreferenceScreen>
